@@ -134,12 +134,6 @@ function putValue (line, text, color)
     batteryMaxCharge = battery.getMaxEnergy()
     putValue(2, putNumber(batteryMaxCharge), colors.lightBlue)
   
-    -- Get our input/output/balance battery values
-    batteryCurrentIn = battery.getLastInput()
-    batteryCurrentOut = battery.getLastOutput()
-    putValue(5, putNumber(batteryCurrentIn), colors.lightBlue)
-    putValue(6, putNumber(batteryCurrentOut), colors.lightBlue)
-  
     batteryCurrentBalance = batteryCurrentIn - batteryCurrentOut
     batteryCurrentColor = (batteryCurrentBalance >= 0) and colors.green or colors.red
     batteryCurrentSign = (batteryCurrentBalance >= 0) and "+" or ""
