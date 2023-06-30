@@ -106,8 +106,6 @@ function putValue (line, text, color)
   -- Draw our static interface text
   term.setCursorPos(11, 2);
   print("Max RF:")
-  term.setCursorPos(11, 3);
-  print("Max Thru:")
   
   term.setCursorPos(11, 5);
   print("Cur In:")
@@ -134,9 +132,7 @@ function putValue (line, text, color)
   
     -- Get our fixed battery values
     batteryMaxCharge = battery.getMaxEnergy()
-    batteryMaxInOuts = battery.getTransferCap()
     putValue(2, putNumber(batteryMaxCharge), colors.lightBlue)
-    putValue(3, putNumber(batteryMaxInOuts), colors.lightBlue)
   
     -- Get our input/output/balance battery values
     batteryCurrentIn = battery.getLastInput()
