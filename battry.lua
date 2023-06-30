@@ -72,8 +72,8 @@ function putValue (line, text, color)
   
   -- Initialize our interface!
   -- Find all of our peripherals
-  monitor = peripheral.wrap("top")
-  battery = peripheral.wrap("left")
+  local monitor = peripheral.wrap("top")
+  local battery = peripheral.wrap("left")
   
   -- Check and bind monitor
   if monitor == nil then
